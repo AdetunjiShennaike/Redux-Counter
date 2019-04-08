@@ -11,7 +11,7 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = (count) => {
   // Fill in this function
-  console.log(count)
+  // console.log(count)
   return {
     type: INCREMENT,
     payload: count + 1
@@ -20,7 +20,7 @@ export const increment = (count) => {
 
 export const decrement = (count) => {
   // Fill in this function
-  console.log(count)
+  // console.log(count)
   return {
     type: DECREMENT,
     payload: count - 1
