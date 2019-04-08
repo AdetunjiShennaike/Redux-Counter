@@ -3,12 +3,11 @@ import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
 class Counter extends Component {
-    incrementIfOdd = (count) => {
+    incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
         // only increments if the counter value is odd
-        console.log(count)
-        if (count%2 !== 0) {
-            count + 1
+        if (this.props.count%2 !== 0) {
+            this.props.increment(this.props.count)
         }
     };
 
@@ -35,7 +34,7 @@ class Counter extends Component {
                 </button>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
-                <button onClick={this.incrementIfOdd(this.props.count)}>
+                <button onClick={this.incrementIfOdd}>
                     Increment if odd
                 </button>
                 <button onClick={this.incrementAsync}>
